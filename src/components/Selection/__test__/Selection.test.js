@@ -65,4 +65,16 @@ describe("Selection Component", () => {
     renderComponent({ selectedOption: 1 });
     expect(screen.getByTestId("option-1")).toHaveClass("selected");
   });
+
+  it("option should not have selected class when selectedOption is not equal to option id", () => {
+    renderComponent({ selectedOption: 2 });
+    expect(screen.getByTestId("option-1")).not.toHaveClass("selected");
+  });
+
+  it("renders no user available for selection when options is empty", () => {
+    renderComponent({ options: [] });
+    expect(
+      screen.getByText("No user available for selection.")
+    ).toBeInTheDocument();
+  });
 });

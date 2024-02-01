@@ -22,6 +22,10 @@ const Selection = ({
     [disabled, handleSelectOption]
   );
 
+  if (!isFetchingOptions && options.length === 0) {
+    return <p>No user available for selection.</p>;
+  }
+
   return (
     <Wrapper>
       <Label>{label}</Label>
