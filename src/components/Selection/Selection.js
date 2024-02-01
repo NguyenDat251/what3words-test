@@ -35,6 +35,7 @@ const Selection = ({
 
             return (
               <SelectionOption
+                data-testid={`option-${id}`}
                 key={id}
                 className={`option ${isSelected ? "selected" : ""}`}
                 onClick={() => onSelectOption(id)}
