@@ -59,8 +59,8 @@ const SelectionOption = styled.div`
   background-color: ${({ $isSelected }) =>
     !$isSelected ? "#FFFFFF" : "#DBEFFA"};
   padding: 0 15.94px 0 16px;
-  white-space: normal;
-  height: 72px;
+  white-space: wrap;
+  min-height: 72px;
   box-sizing: border-box;
   font-size: 14px;
   font-weight: 600;
