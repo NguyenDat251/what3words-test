@@ -3,6 +3,7 @@ import { Selection } from "../";
 import axios from "axios";
 import styled from "styled-components";
 import { useForm, useController } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const FETCH_DATA_URL = "https://jsonplaceholder.typicode.com/users";
 const SUBMIT_DATA_URL = "https://jsonplaceholder.typicode.com/posts";
@@ -29,7 +30,9 @@ const Form = () => {
   const onSubmit = useCallback(async (data) => {
     try {
       await axios.post(SUBMIT_DATA_URL, data);
-    } catch (e) {}
+    } catch (e) {
+      toast.error(e.message);
+    }
   }, []);
 
   const validateSelectedUserId = useCallback((userId) => {
