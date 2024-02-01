@@ -64,8 +64,6 @@ const SelectionOption = styled.div`
   box-sizing: border-box;
   font-size: 14px;
   font-weight: 600;
-
-  overflow-y: scroll;
   text-align: left;
 
   display: flex;
@@ -73,24 +71,21 @@ const SelectionOption = styled.div`
 
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
 
-  & p {
-    width: 105px;
-  }
+  width: 137px;
 `;
 
 const SelectionWrapper = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 24px;
-  grid-column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 `;
 
 const Wrapper = styled.div`
   padding: 0 0 16px 0;
 `;
 
-const Label = styled.p`
+const Label = styled.h4`
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 24px;

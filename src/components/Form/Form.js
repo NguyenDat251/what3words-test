@@ -102,7 +102,8 @@ const Wrapper = styled.div`
   background-color: #ffffff;
   color: #000000;
   padding: 43px 58px 58px 37px;
-  width: 675px;
+  width: 100%;
+  max-width: 675px;
 
   & label {
     font-weight: 600;
