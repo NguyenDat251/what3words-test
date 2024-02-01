@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 41px 58px 16px 37px;
+}
+
+.selection-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
